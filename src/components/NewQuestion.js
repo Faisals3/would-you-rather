@@ -2,12 +2,16 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { Badge , Button } from 'react-bootstrap'
 import {handleAddQuestion} from '../actions/questions'
+import {Redirect} from 'react-router-dom'
+
 
 class NewQuestion extends Component {
     
     state = {
         optionOne : '',
-        optionTwo : ''
+        optionTwo : '',
+        redirect: false,
+
     }
 
     handleChangeOne = (e) => {
@@ -39,12 +43,14 @@ class NewQuestion extends Component {
         optionTwoText : this.state.optionTwo
 
         }
-        handleAddQuestion(question)
 
-        console.log(question.author,question.optionOneText,question.optionTwoText)
+        this.props.dispatch(handleAddQuestion(question))
+
+
         this.setState(() => ({
             optionOne : '',
-            optionTwo : ''
+            optionTwo : '',
+            redirect:true
         }))
        
         
@@ -54,6 +60,7 @@ class NewQuestion extends Component {
     render() {
         return (
             <div >
+                { this.state.redirect ? (<Redirect push to="/"/>) : null }
                 <h2>
                     <Badge variant="secondary">
                         New Question

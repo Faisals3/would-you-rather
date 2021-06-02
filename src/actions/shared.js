@@ -3,7 +3,7 @@ import {receiveUsers} from './users'
 import {receiveQuestions} from './questions'
 import {setAuthedUser} from './authedUser'
 
-const Authed_user = 'sarahedo'
+const Authed_user = ''
 
 export function handleInitialData() {
     return (dispatch) => {

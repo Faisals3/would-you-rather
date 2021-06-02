@@ -2,7 +2,7 @@ let users = {
     sarahedo: {
       id: 'sarahedo',
       name: 'Sarah Edo',
-      avatarURL: 'https://static.wikia.nocookie.net/leagueoflegends/images/d/d6/Season_2015_-_Solo_-_Challenger_3_profileicon.png/revision/latest/scale-to-width-down/128?cb=20170223215243' ,
+      avatarURL: 'https://image.flaticon.com/icons/png/512/427/427533.png' ,
       answers: {
         "8xf0y6ziyjabvozdd253nd": 'optionOne',
         "6ni6ok3ym7mf1p33lnez": 'optionTwo',
@@ -14,7 +14,7 @@ let users = {
     tylermcginnis: {
       id: 'tylermcginnis',
       name: 'Tyler McGinnis',
-      avatarURL:'https://static.wikia.nocookie.net/leagueoflegends/images/b/ba/Season_2016_-_Solo_-_Challenger_3_profileicon.png/revision/latest/scale-to-width-down/300?cb=20170505024344' ,
+      avatarURL: 'https://cdn.iconscout.com/icon/premium/png-256-thumb/tribal-dragon-1848301-1567438.png' ,
       answers: {
         "vthrdm985a262al8qx3do": 'optionOne',
         "xj352vofupe1dqz9emx13r": 'optionTwo',
@@ -24,7 +24,7 @@ let users = {
     johndoe: {
       id: 'johndoe',
       name: 'John Doe',
-      avatarURL:'https://static.wikia.nocookie.net/leagueoflegends/images/2/2e/Season_2017_-_Solo_-_Challenger_profileicon.png/revision/latest/scale-to-width-down/300?cb=20171028004241' ,
+      avatarURL: 'https://static.vecteezy.com/system/resources/previews/000/616/763/non_2x/tiger-icon-vector-illustration-for-logo-design-t-shirt-print-tiger-mascot.jpg' ,
       answers: {
         "xj352vofupe1dqz9emx13r": 'optionOne',
         "vthrdm985a262al8qx3do": 'optionTwo',

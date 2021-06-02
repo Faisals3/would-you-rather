@@ -1,4 +1,4 @@
-import {RECEIVE_QUESTIONS,ADD_QUESTION} from '../actions/questions'
+import {RECEIVE_QUESTIONS,ADD_QUESTION,ADD_ANSWER_TO_QUESTION} from '../actions/questions'
 
 export default function questions (state = {} , action) {
     switch(action.type) {
@@ -9,13 +9,27 @@ export default function questions (state = {} , action) {
             }
         
         case ADD_QUESTION :
-            console.log(action.id,'from question dispatch')
             return {
                 ...state,
                 [action.question.id] : {
                     ...action.question
+                },
+
+    
+            }
+        
+        case ADD_ANSWER_TO_QUESTION :
+            
+            return {
+                ...state,
+                [action.question.qid] : {
+                    ...state[action.question.qid],
+                [action.question.answer] : {
+                    ...state[action.question.qid][action.question.answer],
+                    votes: state[action.question.qid][action.question.answer].votes.concat([action.question.authedUser])
                 }
             }
+        }
 
             default : 
                 return state

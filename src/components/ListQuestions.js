@@ -11,11 +11,15 @@ class ListQuestions extends Component {
     }
 
     handleQuestion(Ques,user) {
+        if(Ques.optionOne.votes) {
+
+        
         if (Ques.optionOne.votes.indexOf(user) !== -1 || Ques.optionTwo.votes.indexOf(user) !== -1) {
             return true
         }
 
         else return false
+    }
     }
 
     toggleState(value) {
@@ -29,6 +33,9 @@ class ListQuestions extends Component {
     render() {
 
         return (
+
+            
+
             <div>
                 <ListGroup defaultActiveKey="#Unanswered" horizontal>
                     <ListGroup.Item action href="#Unanswered" onClick={() => {this.toggleState(false)}}>
